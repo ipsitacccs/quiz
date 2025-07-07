@@ -1,7 +1,8 @@
 :root {
   --green: #00c674;
-  --bg: #f9f9f9;
-  --text: #222;
+  --bg: #fdfdfd;
+  --text: #111;
+  --card-bg: #ffffff;
 }
 
 body {
@@ -28,37 +29,40 @@ header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  font-size: 2.5vh;
+  align-items: flex-end;
+  font-size: 2.2vh;
   padding-bottom: 1vh;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 header h1 {
-  font-size: 4.5vh;
+  font-size: 5vh;
   font-weight: 700;
   margin: 0;
 }
 
-.green { color: var(--green); }
+.green {
+  color: var(--green);
+}
 
 #metrics {
   display: flex;
   gap: 3vw;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
 }
 
 .left {
   grid-area: left;
   display: flex;
   flex-direction: column;
-  gap: 4vh;
+  justify-content: center;
+  gap: 3vh;
 }
 
 .matrix {
   background: white;
-  padding: 1vh;
-  border-radius: 1vh;
+  padding: 1.5vh;
+  border-radius: 1.5vh;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -77,10 +81,11 @@ canvas {
   grid-area: right;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 #latestTitle {
-  font-size: 3vh;
+  font-size: 3.2vh;
   margin-bottom: 2vh;
   font-weight: 600;
 }
@@ -91,15 +96,17 @@ canvas {
 }
 
 .card {
-  background: white;
-  border-radius: 1vh;
-  width: 18vw;
+  background: var(--card-bg);
+  border-radius: 1.5vh;
+  width: 20vw;
   height: 28vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2vh;
+  font-size: 2.4vh;
   text-align: center;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  padding: 1vh;
 }
+
